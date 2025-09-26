@@ -15,8 +15,10 @@ public:
     {
         length = obj.length;
 
-        if (obj.arr)
+        if (*(obj.arr + 0) )
         {
+            arr = new int[obj.length];
+
             for (size_t i = 0; i < length; i++)
             {
                 *(arr + i) = *(obj.arr + i);
@@ -149,4 +151,5 @@ int main()
     cout << endl;
     cout << a.arrMin() << endl;
     cout << a.arrMax() << endl;
+
 }
